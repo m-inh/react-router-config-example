@@ -8,13 +8,13 @@ let app = express();
 app.use(express.static('build'));
 
 app.get('*', function (request, response) {
-  console.log(request);
-  console.log('===============================');
   response.sendFile(path.resolve(__dirname, 'build', 'index.html'))
 });
 
-app.listen(8080, function (err) {
+const PORT = 8080;
+
+app.listen(PORT, function (err) {
   if (err) return console.log(err);
 
-  console.log('Fms-webapp server is up on port ' + 8080);
+  console.log('Server is up on port ' + PORT);
 });

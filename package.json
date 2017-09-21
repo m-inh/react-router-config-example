@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --content-base ."
+    "prestart": "npm i && webpack",
+    "start": "node server"
   },
   "author": "",
   "license": "ISC",
